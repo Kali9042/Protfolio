@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        *{
+            font-family: 'Poppins',sans-serif;
+        }
+        .navlist {
+            background: linear-gradient(-45deg, #3877ff, #262525 40%);
+            display: flex;
+            gap: 3.5rem;
+            height: 15vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .navlist li {
+            list-style: none;
+        }
+        .navlist li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        .navlist li a::after, .navlist .active::after {
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: 100%;
+            height: .1rem;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform .5s;
+        }
+        .navlist li a:hover::after, .navlist .active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .protfolio-container {
+            margin-top: 15vh; /* Add margin to push content below the nav */
+        }
+        .image-container {
+            display: flex;
+            justify-content: center; 
+            margin-bottom: 20px; 
+            padding-top: 20px; /* Optional: Add padding for more space */
+        }
+        .image-container img {
+            width: 450px; 
+            margin: 0 15px; 
+            border: 2px solid #ccc; 
+            border-radius: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="protfolio-container">
+        <ul class="navlist">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="View Project.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#" class="active">Certificate</a></li>
+            <li><a href="Contact me.html">Contact me</a></li>
+        </ul>
+    </div>
+    <div class="image-container">
+        <img src="Certificate/Network-Security.jpg" alt="Network Security Certificate">
+        <img src="Certificate/Python-Fundamentals.jpg" alt="Python Fundamentals Certificate">
+        <img src="Certificate/R.jpg" alt="R Programming Certificate">
+    </div>
+    <div class="image-container">
+        <img src="Certificate/Type of Cyber Security.jpg" alt="Type of Cyber Security Certificate">
+    </div>
+</body>
+</html>

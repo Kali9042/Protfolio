@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects View</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .navlist {
+            background: linear-gradient(-45deg, #3877ff, #262525 40%);
+            display: flex;
+            gap: 3.5rem;
+            height: 15vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .navlist li {
+            list-style: none;
+        }
+        .navlist li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        .navlist li a::after, .navlist .active::after {
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: 100%;
+            height: .1rem;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform .5s;
+        }
+        .navlist li a:hover::after, .navlist .active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            padding-top: 8%;
+        }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .project-title {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .project-detail {
+            margin-top: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .button-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .view-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .run-button {
+            background-color: #28a745;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <ul class="navlist">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="#" class="active">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="Certificate.html">Certificate</a></li>
+            <li><a href="Contact me.html">Contact me</a></li>
+        </ul>
+    </div>
+
+    <h1>Projects</h1>
+
+    <h2 style="text-align: center;">Web Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <div class="project-title">Weather Forecast</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It is used to see weather forecast of all the cities in the world.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> HTML, CSS, JS <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/weather/index.html', '_blank')">Run Project</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Tic-Tac-Toe Game</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It's a game Tik Tok Tik for fun. It can be played in free time.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> HTML, CSS, JS <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/Tic-Tac-Toe-Game/game.html', '_blank')">Run Project</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">E-commerce Platform</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> Building a full-featured e-commerce website.
+            </div>
+            <div class="project-detail">
+                <span class="label">Status:</span> Planned
+            </div>
+            <div class="button-container">
+                <!-- No button for planned projects -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <h2 style="text-align: center;">Python Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <div class="project-title">OTP Verification</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> We can send OTP through email. It will also see that OTP is correct or not.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/OTP_Verification/OTP_verification.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Student-Result-Analysis</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It is used to do analysis of student result. Mostly it is used in schools, colleges, and universities.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/Student-Result-Analysis/student/stud.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Sudoku Solver</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It will solve all Sudoku puzzles of any level.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/sudoku solver/sudoku solver.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <div class="project-title">Dice game</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It is a game of dice. It is used to play in free time.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/dice game/dice game.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <div class="project-title">Email Automation</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It is used to send emails to multiple people at a time and you can set time wher you want to send it.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/email automation/email automation.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <div class="project-title">Paint</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> It is used to draw anything on the screen. It is used to draw anything on the screen.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/paint/paint.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Stopwatch</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> A simple stopwatch application that allows users to start, stop, and reset a timer.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> Completed
+            </div>
+            <div class="button-container">
+                <button class="button run-button" onclick="window.open('./project/stopwatch/stopwatch.py', '_blank')">Download Project</button>
+            </div>
+        </div>
+
+        <!-- add more python projects-->
+
+        <div class="project-card">
+            <div class="project-title">Track-Phone-Number-Location</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> We can track mobile phones using phone numbers.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> In Progress
+            </div>
+            <div class="button-container">
+                <!-- No button for in-progress projects -->
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Face-Recognition</div>
+            <div class="project-detail">
+                <span class="label">Description:</span> A project for recognizing faces using Python.
+            </div>
+            <div class="project-detail">
+                <span class="label">Language:</span> Python <br>
+                <span class="label">Status:</span> In Progress
+            </div>
+            <div class="button-container">
+                <!-- No button for in-progress projects -->
+            </div>
+        </div>
+
+        
+    </div>
+    
+</body>
+</html>
